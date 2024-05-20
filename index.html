@@ -9,9 +9,21 @@
     <h1>JSON</h1>
     <H2>Javascript Object Notation</H2>
     <script>
-        const user = {id: 245, name: "Masud"}
+        const user = {
+            id: 245,
+            name: "Masud",
+            wife: {
+                name: "Rani",
+                favFood: "Pizza"
+            },
+            friendsAge: [22, 19, 23],
+            friendsName: ["Rakib", "Rifat", "Rony"]
+             };
         const userJSON = JSON.stringify(user);
         console.log(userJSON);
+
+        const userFromJSON = JSON.parse(userJSON);
+        console.log(userFromJSON);
     </script>
 </body>
 </html>
